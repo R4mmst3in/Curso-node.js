@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 // setTimeout()
 function mostrarTema(tema) {
   console.log(`Estoy aprendiendo ${tema}`)
@@ -17,4 +18,25 @@ setTimeout(sumar, 2000, 10, 20)
 
 setTimeout(() => {
   sumar(10,200)
+=======
+// setTimeout()
+function mostrarTema(tema) {
+  console.log(`Estoy aprendiendo ${tema}`)
+}
+
+function sumar(num1, num2) {
+  console.log(num1 + num2)
+}
+
+setTimeout(mostrarTema, 2000, 'Node.js')
+
+
+mostrarTema('Javascript') // Esto se imprime antes por la asincronia de Javascript
+
+
+setTimeout(sumar, 2000, 10, 20)
+
+setTimeout(() => {
+  sumar(10,200)
+>>>>>>> ec3c196c631670c99bd5a84f28bc61563c4a848e
 },2000)

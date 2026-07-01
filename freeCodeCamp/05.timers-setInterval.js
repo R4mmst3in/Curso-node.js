@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 // setInterval()
 // Ejecuta codigo un numero infinito de veces con un retraso especifico de microsegundos
 
@@ -14,4 +15,22 @@ setInterval(sumar, 1500, 10, 20)
 
 setInterval(() => {
   mostrarTema('React')
+=======
+// setInterval()
+// Ejecuta codigo un numero infinito de veces con un retraso especifico de microsegundos
+
+function mostrarTema(tema) {
+  console.log(`Estoy aprendiendo ${tema}`)
+}
+
+function sumar(num1, num2) {
+  console.log(num1 + num2)
+}
+
+// 
+setInterval(sumar, 1500, 10, 20)
+
+setInterval(() => {
+  mostrarTema('React')
+>>>>>>> ec3c196c631670c99bd5a84f28bc61563c4a848e
 }, 3000)
