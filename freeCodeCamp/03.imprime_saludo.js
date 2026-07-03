@@ -1,14 +1,16 @@
-<<<<<<< HEAD
-const saludo = require('./3.saludos.js')   // De esta forma importamos TODO el modulo y las funciones que hay
-const {reverenciar} = require('./3.saludos.js') // Con la destructuracion solo el modulo entre llaves
+const saludo = require('./03.saludos.js')   // De esta forma importamos TODO el modulo y las funciones que hay
+const {reverenciar} = require('./03.saludos.js') // Con la destructuracion solo el modulo entre llaves
 
-console.log(saludo.saludar('Javier'))
-// console.log(saludo.reverenciar('Javier'))
-=======
-const saludo = require('./3.saludos.js')   // De esta forma importamos TODO el modulo y las funciones que hay
-const {reverenciar} = require('./3.saludos.js') // Con la destructuracion solo el modulo entre llaves
+const readline = require('readline')
+const persona = readline.createInterface({
+  input: process.stdin,
+  output: process.stdout
+})
 
-console.log(saludo.saludar('Javier'))
-// console.log(saludo.reverenciar('Javier'))
->>>>>>> ec3c196c631670c99bd5a84f28bc61563c4a848e
-console.log(reverenciar('Javier'))
+persona.question('Ingrese su nombre: ', (nombre) => {
+  console.log(saludo.saludar(nombre))
+  console.log(reverenciar(nombre))
+  
+  persona.close()
+})  
+
